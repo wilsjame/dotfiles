@@ -1,6 +1,7 @@
 autocmd filetype cpp nnoremap <F5> :w <bar> !g++ -std=c++17 -Wall % -o out <CR>
 autocmd filetype cpp nnoremap <F6> :w <bar> !g++ -std=c++17 -Wall % -o out && ./out <CR>
 syntax on
+filetype indent on
 hi LineNr ctermfg=DarkGray ctermbg=None
 set rnu             " relative numbering
 set mouse=a         " enable mouse usage (all modes)
@@ -15,5 +16,12 @@ set softtabstop=4
 set autoindent
 set smarttab
 set expandtab
-"set background=dark
+set background=dark " set when using tmux on mac
 "set showmatch      " show matching brackets
+hi StatusLine ctermfg=black ctermbg=DarkGray
+set laststatus=2
+set statusline=     " left side
+set statusline+=%f
+set statusline+=%=  " right side
+set statusline+=%b\ 
+set statusline+=0x%B 
