@@ -21,7 +21,8 @@ set background=dark " set when using tmux on mac
 hi StatusLine ctermfg=black ctermbg=DarkGray
 set laststatus=2
 set statusline=     " left side
-set statusline+=%f
+set statusline+=%F
 set statusline+=%=  " right side
+let &statusline.="\'%{matchstr(getline('.'), '\\%' . col('.') . 'c.')}\'\ "
 set statusline+=%b\ 
 set statusline+=0x%B 
