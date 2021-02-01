@@ -11,6 +11,7 @@ set showcmd         " show (partial) command in status line
 set report=0        " threshold for reporting number of lines changed
 set incsearch       " highlights pattern match as you type 
 set hlsearch
+set shortmess-=S    " show number of search matches
 set smartcase
 set tabstop=4
 set shiftwidth=4
@@ -30,7 +31,7 @@ set statusline+=%=  " right side
 set statusline+=%1*%=%5l%*      "current line
 set statusline+=%2*/%L%*        "total lines
 set statusline+=%1*%4v\ %*      "virtual column number
-let &statusline.="\'%{matchstr(getline('.'), '\\%' . col('.') . 'c.')}\'\ "
+"let &statusline.="\'%{matchstr(getline('.'), '\\%' . col('.') . 'c.')}\'\ "
 set statusline+=%b\ 
 set statusline+=0x%B 
 
@@ -43,3 +44,9 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j  
 nnoremap <C-k> <C-w>k  
 nnoremap <C-l> <C-w>l  
+" switch between window splits using Ctrl-[arrow keys] for use in netrw vertical splits
+"nnoremap <A-Left> <C-w>h  
+"nnoremap <A-Down> <C-w>j  
+"nnoremap <A-Up> <C-w>k  
+"nnoremap <A-Right> <C-w>l  
+
