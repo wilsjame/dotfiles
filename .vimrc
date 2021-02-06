@@ -5,6 +5,26 @@ syntax on
 filetype indent on
 "hi LineNr ctermfg=DarkGray ctermbg=None
 hi LineNr ctermfg=DarkGray ctermbg=None
+
+" vim-plug automatic installation
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" Plugins will be downloaded under the specified directory.
+call plug#begin('~/.vim/plugged')
+" Declare the list of plugins.
+"Plug 'tpope/vim-sensible'
+Plug 'mattn/emmet-vim'
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
+
+" emmet config
+"redefine trigger key
+let g:user_emmet_leader_key=','
+
 "set rnu             " relative numbering
 set nu
 set mouse=a         " enable mouse usage (all modes)
