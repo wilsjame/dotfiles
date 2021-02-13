@@ -1,6 +1,7 @@
 autocmd filetype cpp nnoremap <F5> :w <bar> !g++ -std=c++17 -Wall % -o out <CR>
 autocmd filetype cpp nnoremap <F6> :w <bar> !g++ -std=c++17 -Wall % -o out && ./out <CR>
 autocmd filetype python nnoremap <F5> :w <bar> !python3 %<CR>
+autocmd filetype ruby nnoremap <F5> :w <bar> !ruby %<CR>
 syntax on
 filetype indent on
 "hi LineNr ctermfg=DarkGray ctermbg=None
