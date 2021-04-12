@@ -7,6 +7,11 @@ filetype indent on
 "hi LineNr ctermfg=DarkGray ctermbg=None
 hi LineNr ctermfg=DarkGray ctermbg=None
 
+" highlight current line number
+set cursorline
+hi cursorline cterm=none
+hi CursorLineNr cterm=bold ctermfg=Darkblue ctermbg=None
+
 " vim-plug automatic installation
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
