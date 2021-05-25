@@ -23,10 +23,11 @@ endif
 
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
-" Declare the list of plugins.
+" Declare the list of plugins. :source % :PlugInstall
 "Plug 'tpope/vim-sensible'
 Plug 'mattn/emmet-vim'
 Plug 'elzr/vim-json'
+Plug 'yuezk/vim-js'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
