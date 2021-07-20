@@ -37,6 +37,7 @@ let g:user_emmet_leader_key=','
 
 "set rnu             " relative numbering
 set nu
+set visualbell      " disable beep (WSL)
 set mouse=a         " enable mouse usage (all modes)
 set showcmd         " show (partial) command in status line	
 set report=0        " threshold for reporting number of lines changed
