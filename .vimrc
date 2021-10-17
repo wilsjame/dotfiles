@@ -79,9 +79,9 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j  
 nnoremap <C-k> <C-w>k  
 nnoremap <C-l> <C-w>l  
-" switch between window splits using Ctrl-[arrow keys] for use in netrw vertical splits
-"nnoremap <A-Left> <C-w>h  
-"nnoremap <A-Down> <C-w>j  
-"nnoremap <A-Up> <C-w>k  
-"nnoremap <A-Right> <C-w>l  
 
+" auto complete brackets
+inoremap { {}<Left>
+inoremap {<CR> {<CR>}<Esc>O
+inoremap {{ {
+inoremap {} {}
