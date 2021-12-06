@@ -1,6 +1,7 @@
 autocmd filetype cpp nnoremap <F5> :w <bar> !g++ -std=c++17 -Wall % -o out <CR>
 autocmd filetype cpp nnoremap <F6> :w <bar> !g++ -std=c++17 -Wall % -o out && ./out <CR>
 autocmd filetype python nnoremap <F5> :w <bar> !python3 %<CR>
+autocmd filetype python nnoremap <C-\> :w <bar> !python3 %
 autocmd filetype ruby nnoremap <F5> :w <bar> !ruby %<CR>
 autocmd filetype go nnoremap <F5> :w <bar> !go build <CR>
 autocmd filetype go nnoremap <F6> :w <bar> !go run % <CR>
