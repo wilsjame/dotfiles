@@ -1,7 +1,7 @@
 autocmd filetype cpp nnoremap <F5> :w <bar> !g++ -std=c++17 -Wall % -o out <CR>
 autocmd filetype cpp nnoremap <F6> :w <bar> !g++ -std=c++17 -Wall % -o out && ./out <CR>
-autocmd filetype python nnoremap <F5> :w <bar> !python3.10 %<CR>
-autocmd filetype python nnoremap <C-\> :w <bar> !python3.10 %
+autocmd filetype python nnoremap <F5> :w <bar> !python3 %<CR>
+autocmd filetype python nnoremap <C-\> :w <bar> !python3 %
 autocmd filetype ruby nnoremap <F5> :w <bar> !ruby %<CR>
 autocmd filetype go nnoremap <F5> :w <bar> !go build <CR>
 autocmd filetype go nnoremap <F6> :w <bar> !go run % <CR>
@@ -10,6 +10,7 @@ autocmd filetype javascript setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd filetype rst setlocal shiftwidth=3 softtabstop=3 expandtab
 syntax on
 filetype indent on
+let g:go_highlight_trailing_whitespace_error=0
 "hi LineNr ctermfg=DarkGray ctermbg=None
 hi LineNr ctermfg=DarkGray ctermbg=None
 
