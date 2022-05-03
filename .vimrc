@@ -6,6 +6,7 @@ autocmd filetype ruby nnoremap <F5> :w <bar> !ruby %<CR>
 autocmd filetype go nnoremap <F5> :w <bar> !go build <CR>
 autocmd filetype go nnoremap <F6> :w <bar> !go run % <CR>
 autocmd filetype cs nnoremap <F5> :w <bar> !dotnet run % <CR>
+autocmd filetype cs setlocal shiftwidth=4 softtabstop=4 expandtab
 autocmd filetype html setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd filetype javascript setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd filetype rst setlocal shiftwidth=3 softtabstop=3 expandtab
