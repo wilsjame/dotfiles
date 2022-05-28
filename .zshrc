@@ -1,5 +1,6 @@
 #alias ls='ls -aGFhp'
 alias ls='ls --color'
+alias ll='ls -alF'
 
 export PROMPT='%F{green}%~%f > '
 export EDITOR='vim'
