@@ -1,6 +1,7 @@
 #alias ls='ls -aGFhp'
 alias ls='ls --color'
 alias ll='ls -alF'
+alias lg='git log --pretty=oneline'
 
 export PROMPT='%F{green}%~%f > '
 export EDITOR='vim'
