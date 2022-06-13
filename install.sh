@@ -37,12 +37,14 @@ function backup_if_exists() {
 # clean up common conflicts
 backup_if_exists ~/.zshrc
 backup_if_exists ~/.vimrc
+backup_if_exists ~/.ideavimrc
 backup_if_exists ~/.tmux.conf
 backup_if_exists ~/.gitconfig
 
 # link new dotfiles
 ln -sv ${PWD}/.zshrc ~/.zshrc
 ln -sv ${PWD}/.vimrc ~/.vimrc
+ln -sv ${PWD}/.ideavimrc ~/.ideavimrc
 ln -sv ${PWD}/.tmux.conf ~/.tmux.conf
 ln -sv ${PWD}/.gitconfig ~/.gitconfig
 
