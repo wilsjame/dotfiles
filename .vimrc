@@ -96,3 +96,22 @@ set foldlevelstart=20
 autocmd Syntax python setlocal foldmethod=indent
 autocmd Syntax python normal zR
 hi Folded ctermbg=black
+
+" --------------------------------------------------------
+" Double tap to jump back and forth between two tab pages.
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+autocmd TabLeave ** let prev = tabpagenr()
+autocmd TabEnter ** let curr = tabpagenr()
+
+function! Jump()
+
+    if g:prev > tabpagenr('$')
+      echo "Could not reach previous tab, maybe you closed it?"
+    else
+      execute "tabn ".g:prev
+      " echo "current tab ".g:curr "previous tab ".g:prev
+    endif
+
+endfunction
+
+nmap <silent> tt :call Jump()<CR>
