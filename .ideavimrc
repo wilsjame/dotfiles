@@ -1,3 +1,6 @@
 #source ~/.vimrc
+nmap <silent> `e :e ~/.ideavimrc<CR>
+nmap <silent> `r :action IdeaVim.ReloadVimRc.reload<CR>
+
 set incsearch       " highlights pattern match as you type 
 set hlsearch        " highlights persist after enter, :noh -> off
