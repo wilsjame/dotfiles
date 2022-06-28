@@ -40,6 +40,7 @@ backup_if_exists ~/.vimrc
 backup_if_exists ~/.ideavimrc
 backup_if_exists ~/.tmux.conf
 backup_if_exists ~/.gitconfig
+backup_if_exists ~/.hammerspoon/init.lua
 
 # link new dotfiles
 ln -sv ${PWD}/.zshrc ~/.zshrc
@@ -47,5 +48,6 @@ ln -sv ${PWD}/.vimrc ~/.vimrc
 ln -sv ${PWD}/.ideavimrc ~/.ideavimrc
 ln -sv ${PWD}/.tmux.conf ~/.tmux.conf
 ln -sv ${PWD}/.gitconfig ~/.gitconfig
+ln -sv ${PWD}/.hammerspoon/init.lua ~/.hammerspoon/init.lua
 
 echo "^^^"
