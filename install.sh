@@ -14,7 +14,7 @@ if uname | grep Darwin; then
   echo running OS X
 elif uname --kernel-release | grep WSL2; then
   # use git for windows credential manager
-  git config --file ./.gitconfig credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe"
+  git config --file ./.gitconfig credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-wincred.exe"
 elif uname | grep Linux; then
   echo running Linux
 fi
