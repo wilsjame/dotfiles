@@ -8,3 +8,20 @@ export EDITOR='vim'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+function parse_git_branch() {
+  git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
+}
+
+COLOR_DEF=$'\e[0m'
+#COLOR_USR=$'\e[38;5;243m'
+COLOR_DIR=$'\e[38;5;197m'
+COLOR_GIT=$'\e[38;5;39m'
+setopt PROMPT_SUBST
+export PROMPT='%n ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF} $ '
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/james/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/james/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/james/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/james/google-cloud-sdk/completion.zsh.inc'; fi
