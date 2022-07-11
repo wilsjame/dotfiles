@@ -10,6 +10,7 @@ autocmd filetype cs setlocal shiftwidth=4 softtabstop=4 expandtab
 autocmd filetype html setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd filetype javascript setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd filetype rst setlocal shiftwidth=3 softtabstop=3 expandtab
+autocmd filetype sh nnoremap <F5> :w <bar> !./% <CR>
 syntax on
 filetype indent on
 let g:go_highlight_trailing_whitespace_error=0
