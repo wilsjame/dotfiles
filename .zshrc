@@ -3,6 +3,7 @@ alias ls='ls --color'
 alias ll='ls -alF'
 alias lg='git log --pretty=oneline'
 alias ld='docker ps --format "table {{.Names}}\t{{.Image}}\t{{.State}}"'
+alias ldi='docker ps --format "table {{.Names}}\t{{.Image}}\t{{.ID}}"'
 alias ldp='docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Ports}}"'
 alias ldm='docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Mounts}}"'
 
