@@ -1,3 +1,4 @@
+# TODO source .rc's, change prompt if in a container?
 #!/usr/bin/env bash
 
 # exit if a command returns non-zero (prevent snowballing)
@@ -36,6 +37,7 @@ function backup_if_exists() {
 
 # clean up common conflicts
 backup_if_exists ~/.zshrc
+backup_if_exists ~/.bashrc
 backup_if_exists ~/.vimrc
 backup_if_exists ~/.ideavimrc
 backup_if_exists ~/.tmux.conf
@@ -44,6 +46,7 @@ backup_if_exists ~/.hammerspoon/init.lua
 
 # link new dotfiles
 ln -sv ${PWD}/.zshrc ~/.zshrc
+ln -sv ${PWD}/.bashrc ~/.bashrc
 ln -sv ${PWD}/.vimrc ~/.vimrc
 ln -sv ${PWD}/.ideavimrc ~/.ideavimrc
 ln -sv ${PWD}/.tmux.conf ~/.tmux.conf
