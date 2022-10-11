@@ -37,3 +37,7 @@ if [ -f '/Users/james/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jam
 
 # This loads nvm bash_completion.
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  
+
+eval $(thefuck --alias)
+# Try not to swear.
+eval $(thefuck --alias nah)
