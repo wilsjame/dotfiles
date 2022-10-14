@@ -41,3 +41,6 @@ if [ -f '/Users/james/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jam
 eval $(thefuck --alias)
 # Try not to swear.
 eval $(thefuck --alias nah)
+
+# https://stackoverflow.com/questions/39606031/intellij-key-repeating-idea-vim
+defaults write -g ApplePressAndHoldEnabled 0
