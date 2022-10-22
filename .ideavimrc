@@ -4,3 +4,6 @@ nmap <silent> `r :action IdeaVim.ReloadVimRc.reload<CR>
 
 set incsearch       " highlights pattern match as you type 
 set hlsearch        " highlights persist after enter, :noh -> off
+
+set ignorecase      " for smartcase [note: substitution may need I flag .../gI]
+set smartcase       " case sensitive search /\c -> /\C if uppercase typed 

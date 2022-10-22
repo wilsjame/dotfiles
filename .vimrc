@@ -52,7 +52,8 @@ set report=0        " threshold for reporting number of lines changed
 set incsearch       " highlights pattern match as you type 
 set hlsearch
 set shortmess-=S    " show number of search matches
-set smartcase
+set ignorecase      " for smartcase [note: substitution may need I flag .../gI]
+set smartcase       " case sensitive search /\c -> /\C if uppercase typed 
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
