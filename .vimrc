@@ -47,13 +47,13 @@ let g:user_emmet_leader_key=','
 set nu
 set visualbell      " disable beep (WSL)
 set mouse=a         " enable mouse usage (all modes)
-set showcmd         " show (partial) command in status line	
+set showcmd         " show (partial) command in status line
 set report=0        " threshold for reporting number of lines changed
-set incsearch       " highlights pattern match as you type 
+set incsearch       " highlights pattern match as you type
 set hlsearch
 set shortmess-=S    " show number of search matches
 set ignorecase      " for smartcase [note: substitution may need I flag .../gI]
-set smartcase       " case sensitive search /\c -> /\C if uppercase typed 
+set smartcase       " case sensitive search /\c -> /\C if uppercase typed
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
@@ -73,18 +73,18 @@ set statusline+=%1*%=%5l%*      "current line
 set statusline+=%2*/%L%*        "total lines
 set statusline+=%1*%4v\ %*      "virtual column number
 "let &statusline.="\'%{matchstr(getline('.'), '\\%' . col('.') . 'c.')}\'\ "
-set statusline+=%b\ 
-set statusline+=0x%B 
+set statusline+=%b\
+set statusline+=0x%B
 
 highlight Comment ctermfg=green
 
 let g:netrw_liststyle = 3 " netrw default to tree view
 
 " switch between window splits using Ctrl-[hjkl] instead of Ctrl-w [hjkl]
-nnoremap <C-h> <C-w>h  
-nnoremap <C-j> <C-w>j  
-nnoremap <C-k> <C-w>k  
-nnoremap <C-l> <C-w>l  
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " auto complete brackets
 inoremap { {}<Left>
