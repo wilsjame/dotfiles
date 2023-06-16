@@ -12,27 +12,30 @@ alias ldi='docker ps --format "table {{.Names}}\t{{.Image}}\t{{.ID}}"'
 alias ldp='docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Ports}}"'
 alias ldm='docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Mounts}}"'
 
-export PROMPT='%F{green}%~%f > '
+# prompt
+# Find and set branch name var if in git repository.
+function git_branch_name()
+{
+  branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
+  if [[ $branch == "" ]];
+  then
+    :
+  else
+    echo '- ('$branch')'
+  fi
+}
+
+# Enable substitution in the prompt.
+setopt prompt_subst
+
+# Config for prompt. PS1 synonym.
+#prompt='%F{green}%2/ $(git_branch_name) > '
+export PROMPT='%F{green}%~%f $(git_branch_name) > '
+
 export EDITOR='vim'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
-# fix this https://askubuntu.com/questions/24358/how-do-i-get-long-command-lines-to-wrap-to-the-next-line
-#
-#function parse_git_branch() {
-#  git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
-#}
-#
-#COLOR_DEF=$'\e[0m'
-##COLOR_USR=$'\e[38;5;243m'
-#COLOR_DIR=$'\e[38;5;197m'
-#COLOR_GIT=$'\e[38;5;39m'
-#setopt PROMPT_SUBST
-#export PROMPT='%n ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF} $ '
-#
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/james/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/james/google-cloud-sdk/path.zsh.inc'; fi
