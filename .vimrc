@@ -18,7 +18,7 @@ let g:go_highlight_trailing_whitespace_error=0
 hi LineNr ctermfg=DarkGray ctermbg=None
 
 " highlight current line number
-set cursorline
+" set cursorline
 hi cursorline cterm=none
 hi CursorLineNr cterm=bold ctermfg=Darkblue ctermbg=None
 
