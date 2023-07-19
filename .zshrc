@@ -1,6 +1,7 @@
 #alias ls='ls -aGFhp'
 alias ls='ls --color'
 alias ll='ls -alF'
+alias history='history -i'
 
 # git
 alias lg='git log --pretty=oneline'
