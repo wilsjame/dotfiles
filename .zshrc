@@ -3,6 +3,9 @@ alias ls='ls --color'
 alias ll='ls -alF'
 alias history='history -i'
 
+# tree
+alias tree='tree -C'
+
 # git
 alias lg='git log --pretty=oneline'
 alias nuke='git reset --hard HEAD'
