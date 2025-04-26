@@ -59,3 +59,6 @@ defaults write -g ApplePressAndHoldEnabled 0
 
 # This has to be set before installing the .NET SDK
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
+# k9s
+export KUBE_EDITOR=vim
